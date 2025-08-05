@@ -3,202 +3,142 @@ Ingeniería en Computación UNTREF, Plan 2022
 
 ```mermaid
 ---
+config:
+  layout: elk
 title: Ingeniería en Computación - UNTREF
 ---
 flowchart TD
+ subgraph a1["Primer Año"]
+        id591["Problemas de Historia del Siglo XX"]
+        id592["Introducción a la Problemática del Mundo Contemporáneo"]
+        id1700["Introducción a la Ingeniería en Computación"]
+        id1701["Algoritmos y Programación I"]
+        id1702["Álgebra I"]
+        id1703["Matemática Discreta"]
+        id1704["Algoritmos y Programación II"]
+        id1705["Álgebra II"]
+        id1706["Diseño Lógico"]
+        id1707["Programación de Bajo Nivel"]
+  end
+ subgraph subGraph1["Optativas de Tecnicaturas"]
+        id1243["Fundamentos de Computación"]
+        id1739["Diseño de Páginas Web"]
+        id1849["Arquitecturas Avanzadas"]
+        id1850["Inteligencia Artificial"]
+  end
+ subgraph a2["Segundo Año"]
+        id2["Cultura Contemporánea"]
+        id3["Cuestiones de Sociología, Economía y Política"]
+        id1708["Análisis Matemático I"]
+        id1709["Estructura de Datos"]
+        id1710["Arquitectura de Computadoras I"]
+        id1711["Análisis Matemático II"]
+        id1714["Taller de Lectoescritura"]
+        id1715["Sistemas Operativos"]
+        id1737["Inglés Básico"]
+        id1738["Inglés Técnico"]
+        subGraph1
+  end
+ subgraph subGraph3["Optativas de Ingeniería"]
+        id1258["Ingeniería de Requerimientos"]
+        id1741["Sistemas Operativos Avanzados"]
+        id1874["Arquitecturas Avanzadas"]
+        id1875["Ingeniería de Software II"]
+  end
+ subgraph a3["Tercer Año"]
+        id1713["Física I"]
+        id1716["Probabilidad y Estadística"]
+        id1717["Base de Datos"]
+        id1718["Ingeniería de Software"]
+        id1719["Física II"]
+        id1720["Comunicación de Datos"]
+        id1721["Diseño y Arquitectura de Sistemas de Computación"]
+        id1724["Redes de Computadoras"]
+        subGraph3
+  end
+ subgraph subGraph5["Asignaturas Electivas"]
+        id700["Sistemas de Información Geográfica II"]
+        id1480["Gestión de los Servicios de Enfermería"]
+  end
+ subgraph a4["Cuarto Año"]
+        id1["Metodología de la Investigación"]
+        id1712["Álgebra III"]
+        id1722["Matemáticas Especiales"]
+        id1723["Dispositivos Eléctronicos"]
+        id1725["Trayecto Formativo Alternativo"]
+        id1726["Ingeniería de Calidad"]
+        id1727["Laboratorio de Electrónica"]
+        id1728["Construcción de Sistemas de Computación"]
+        id1729["Procesamiento de Señales"]
+        subGraph5
+  end
+ subgraph a5["Quinto Año"]
+        id1730["Sistemas Embebidos"]
+        id1731["Sistemas Ciberfísicos"]
+        id1732["Control Automático"]
+        id1733["Ética y Legislación"]
+        id1734["Higiene y Seguridad"]
+        id1735["Trabajo Final Integrador"]
+        id1736["Práctica Profesional Supervisada"]
+  end
+    id1709 --> id1717 & id1715
+    id1738 --> id1717 & id1718
+    id1711 --> id1716 & id1719
+    id1707 --> id1715
+    id1708 --> id1713 & id1711
+    id1713 --> id1719
+    id1702 --> id1708 & id1705
+    id1706 --> id1710
+    id1704 --> id1709 & id1718 & id1739
+    id1700 --> id1707 & id1706
+    id1701 --> id1706 & id1704
+    id1703 --> id1706 & id1243
+    id1720 --> id1724
+    id1715 --> id1721 & id1720
+    id1718 --> id1721 & id1726 & id1
+    id1737 --> id1738
+    id1710 --> id1849
+    id1712 --> id1729 & id1736
+    id1722 --> id1729 & id1736 & id1732
+    id1721 --> id1728
+    id1724 --> id1728
+    id1723 --> id1727 & id1736 & id1730
+    id1716 --> id1726
+    id1719 --> id1723
+    id1725 --> id1736
+    id1726 --> id1736 & id1733 & id1734
+    id1728 --> id1731 & id1730
+    id1730 --> id1735
+    id1731 --> id1735
+    id1732 --> id1735
+    id1733 --> id1735
+    id1734 --> id1735
+    id1736 --> id1735
+    a1 -.[Requiere 1er Año].-> a4 & a5
+    a2 -.[Requiere 2do Año].-> a4 & a5
+    a3 -.[Requiere 3er Año].-> a5
+     id591:::aprobada
+     id592:::aprobada
+     id1700:::aprobada
+     id1701:::aprobada
+     id1702:::aprobada
+     id1703:::aprobada
+     id1704:::regularizada
+     id1705:::aprobada
+     id1707:::aprobada
+     id2:::aprobada
+     id3:::aprobada
+     id1708:::aprobada
+     id1711:::aprobada
+     id1737:::aprobada
+     id1738:::aprobada
+     id1850:::aprobada
+     id1713:::aprobada
+     id1718:::regularizada
+     id1719:::aprobada
+     id1712:::aprobada
+     id1722:::aprobada
     classDef aprobada fill:#0e6902
     classDef enCurso  fill:#186328
     classDef regularizada fill:#c9bc04
-
-    id1[Introducción a la Ingeniería en Computación]:::aprobada
-    id2[Introducción a la Problemática del Mundo Contemporáneo]:::aprobada
-    id3[Algoritmos y Programación I]:::aprobada
-    id4[Álgebra I]:::aprobada
-    id5[Matemática Discreta]:::aprobada
-    id6[Problemas de Historia del Siglo XX]:::aprobada
-    id7[Algoritmos y Programación II]:::regularizada
-    id8[Programación de Bajo Nivel]:::aprobada
-    id9[Álgebra II]:::aprobada
-    id10[Diseño Lógico]
-    id11[Análisis Matemático I]:::aprobada
-    id12[Cuestiones de Sociología, Economía y Política]:::aprobada
-    id13[Estructura de Datos]
-    id14[Arquitectura de Computadoras I]
-    id15[Inglés Básico]:::aprobada
-    id16[Optativa Tecnicatura - IA]:::aprobada
-    id17[Análisis Matemático II]:::aprobada
-    id18[Cultura Contemporánea]:::aprobada
-    id19[Sistemas Operativos]
-    id20[Inglés Técnico]:::aprobada
-    id21[Taller de Lectoescritura]
-    id22[Ingeniería de Software]:::regularizada
-    id23[Física I]:::aprobada
-    id24[Comunicación de Datos]
-    id25[Base de Datos]
-    id26[Asignatura Optativa Ingeniería]
-    id27[Física II]:::aprobada
-    id28[Redes de Computadoras]
-    id29[Diseño y Arquitectura de Sistemas de Computación]
-    id30[Probabilidad y Estadística]
-    id31[Trayecto Formativo Alternativo]
-    id32[Matemáticas Especiales]:::aprobada
-    id33[Dispositivos Eléctronicos]
-    id34[Álgebra III]:::aprobada
-    id35[Ingeniería de Calidad]
-    id37[Asignatura Electiva]
-    id38[Laboratorio de Electrónica]
-    id39[Construcción de Sistemas de Computación]
-    id40[Procesamiento de Señales]
-    id41[Metodología de la Investigación]
-    id43[Asignatura Electiva]
-    id44[Sistemas Embebidos]
-    id45[Sistemas Ciberfísicos]
-    id46[Control Automático]
-    id47[Ética y Legislación]
-    id48[Higiene y Seguridad]
-    id49[Práctica Profesional Supervisada]
-    id50[Trabajo Final Integrador]
-
-    subgraph a1 ["Primer Año"]
-        subgraph Comunes1
-        id2
-        id6
-        end
-    id1
-    id2
-    id3
-    id4
-    id5
-    id6
-    id7
-    id8
-    id9
-    id10
-    end
-
-    subgraph a2 ["Segundo Año"]
-        subgraph Comunes2
-        id12
-        id18
-        id21
-        end
-    id11
-    id12
-    id13
-    id14
-    id15
-    id16
-    id17
-    id18
-    id19
-    id20
-    id21
-    end
-
-    subgraph a3 ["Tercer Año"]
-    id22
-    id23
-    id24
-    id25
-    id26
-    id27
-    id28
-    id29
-    id30
-    end
-
-    subgraph a4 ["Cuarto Año"]
-    id31
-    id32
-    id33
-    id34
-    id35
-    id37
-    id38
-    id39
-    id40
-    id41
-    end
-
-    subgraph a5 ["Quinto Año"]
-    id43
-    id44
-    id45
-    id46
-    id47
-    id48
-    id49
-    end
-
-    a1  -.->a4
-    a1  -.->a5
-    a2  -.->a4
-    a2  -.->a5
-
-    id4 -->id9
-    id4 -->id11
-    id13-->id25
-    id20-->id25
-    id17-->id30
-    id8 -->id19
-    id13-->id19
-    id11-->id23
-    %%Álgebra III
-
-    id11-->id17
-    id10-->id14
-    id7 -->id13
-    id1 -->id8
-    id3 -->id10
-    id1 -->id10
-    id5 -->id10
-    id3 --> id7
-    id22-->id29
-    id19-->id29
-    id19-->id24
-    id23-->id27
-    id17-->id27
-    id7 -->id22
-    id20-->id22
-    id15-->id20
-    id33-->id38
-
-    %%Procesamiento de Señales
-    id32-->id40
-    id34-->id40
-
-    %%Construcción de Sistemas de Computación
-    id28-->id39
-    id29-->id39
-
-    %%Ingeniería de Calidad
-    id22-->id35
-    id30-->id35
-
-    id24-->id28
-    id27-->id33
-
-    id22-->id41
-    id35-->id47
-    id35-->id48
-    id32-->id46
-    id33-->id44
-    id39-->id44
-    id39-->id45
-
-    %%Práctica Profesional Supervisada
-    a1 -.->id49
-    a2 -.->id49
-    a3 -.->id49
-    id34-->id49
-    id32-->id49
-    id35-->id49
-    id31-->id49
-
-    %%Trabajo Final Integrador
-    a1 -.->id50
-    a2 -.->id50
-    a3 -.->id50
-    a4 -.->id50
-    a5 -.->id50
 ```
